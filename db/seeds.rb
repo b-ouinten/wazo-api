@@ -13,37 +13,37 @@ ApplicationRecord.descendants.each { |model|
   puts "The table #{model.table_name} was deleted !"
 }
 
-user = User.create(username: 'wazo', email: 'bouinten@yahoo.fr', password:'wazo6556')
+# user = User.create(username: 'wazo', email: 'bouinten@yahoo.fr', password:'wazo6556')
 
-5.times do
-  User.create(
-    username: Faker::Internet.username,
-    email: Faker::Internet.email,
-    password: Faker::Internet.password(min_length: 6)
-  )
-end
+# 5.times do
+#   User.create(
+#     username: Faker::Internet.username,
+#     email: Faker::Internet.email,
+#     password: Faker::Internet.password(min_length: 6)
+#   )
+# end
 
-puts 'Table users was filled by a few records using Faker gem !'
+# puts 'Table users was filled by a few records using Faker gem !'
 
-users = User.all
+# users = User.all
 
-30.times do 
-  Post.create(
-    content: Faker::Movie.quote,
-    author: users.sample
-  )
-end
+# 30.times do 
+#   Post.create(
+#     content: Faker::Movie.quote,
+#     author: users.sample
+#   )
+# end
 
-puts 'Table postes was filled by a few records using Faker gem !'
+# puts 'Table postes was filled by a few records using Faker gem !'
 
-posts = Post.all
+# posts = Post.all
 
-30.times do
-  Comment.create(
-    content: Faker::Movie.quote,
-    post: posts.sample,
-    author: users.sample
-  )
-end
+# 30.times do
+#   Comment.create(
+#     content: Faker::Movie.quote,
+#     post: posts.sample,
+#     author: users.sample
+#   )
+# end
 
-puts 'Table comments was filled by a few records using Faker gem !'
+# puts 'Table comments was filled by a few records using Faker gem !'
